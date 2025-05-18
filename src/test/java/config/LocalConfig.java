@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:${envMobile}.properties"
 })
-public interface LocalConfig extends Config{
+public interface LocalConfig extends Config {
     @Config.Key("deviceName")
     @Config.DefaultValue("Pixel 4 API 30")
     String getDeviceName();

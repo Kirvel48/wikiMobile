@@ -52,7 +52,7 @@ public class LocalTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка поиска")
+    @DisplayName("Проверка размера поисковой выдачи")
     @Owner("Тётушкин К.И.")
     void openArticleTest() {
         onboardingScreenComponent.closeOnboardingScreen();

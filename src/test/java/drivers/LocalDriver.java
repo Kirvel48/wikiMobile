@@ -21,7 +21,7 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class LocalDriver implements WebDriverProvider {
 
-    LocalConfig localConfig = ConfigFactory.create(LocalConfig.class,System.getProperties());
+    LocalConfig localConfig = ConfigFactory.create(LocalConfig.class, System.getProperties());
 
     @Nonnull
     @Override
