@@ -66,7 +66,7 @@ ____
 ## <a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/wikiMobile)</a>
 ### **Параметры сборки в Jenkins:**
 
-- *task (выбор группы тестов для запуска, по умолчанию все - test)*
+- *tags (выбор способа запуска, по умолчанию browserstack)*
 
 
 <a id="console"></a>
@@ -91,19 +91,17 @@ ___
 ### *Основная страница отчёта*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/allure-dashboard.png" width="850">  
+<img title="Allure Overview Dashboard" src="images/AllureStart.jpg" width="850">  
 </p>  
 
 ### *Тест-кейсы*
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/allure-test-cases.png" width="850">  
+<img title="Allure Tests" src="images/AllureSteps.jpg" width="850">  
 </p>
 
 ### *Графики*
 
   <p align="center">  
-<img title="Allure Graphics" src="images/screen/allure-report-graphs.png" width="850">
+<img title="Allure Graphics" src="images/AllureGraphs.jpg" width="850">
 
-<img title="Allure Graphics" src="images/screen/allure-report-graphs2.png" width="850">  
-</p>
