@@ -14,7 +14,7 @@ public interface BrowserstackConfig extends Config {
 
 
     @Key("url")
-   // @DefaultValue("https://hub.browserstack.com/wd/hub")
+    @DefaultValue("https://hub.browserstack.com/wd/hub")
     String getUrl();
 
     @Key("device")
@@ -22,10 +22,10 @@ public interface BrowserstackConfig extends Config {
     String getDevice();
 
     @Key("platformVersion")
-    @DefaultValue("12.0")
+    @DefaultValue("10.0")
     String getPlatformVersion();
 
     @Key("app")
-    @DefaultValue("bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c")
+    @DefaultValue("bs://sample.app")
     String getApp();
 }

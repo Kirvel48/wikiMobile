@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BrowserstackDriver implements WebDriverProvider {
     protected static BrowserstackConfig browserstackConfig = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
@@ -19,27 +21,20 @@ public class BrowserstackDriver implements WebDriverProvider {
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         MutableCapabilities caps = new MutableCapabilities();
-
-        caps.setCapability("browserstack.user", browserstackConfig.getUsername());
-        caps.setCapability("browserstack.key", browserstackConfig.getAuthkey());
+        Map<String, Object> bstackOptions = new HashMap<>();
+        bstackOptions.put("userName", browserstackConfig.getUsername());
+        bstackOptions.put("accessKey", browserstackConfig.getAuthkey());
+        bstackOptions.put("projectName", "My Project");
+        bstackOptions.put("buildName", "Build 1");
+        bstackOptions.put("sessionName", "Test Session");
 
         caps.setCapability("app", browserstackConfig.getApp());
+        caps.setCapability("deviceName", browserstackConfig.getDevice());
+        caps.setCapability("osVersion", browserstackConfig.getPlatformVersion());
 
-        caps.setCapability("device", browserstackConfig.getDevice());
-        caps.setCapability("os_version", browserstackConfig.getPlatformVersion());
-
-        caps.setCapability("project", "BrowserStack Sample");
-        caps.setCapability("build", "browserstack-build-1");
-        caps.setCapability("name", "first_test");
-        System.out.println("User: " + browserstackConfig.getUsername());
-        System.out.println("Key: " + browserstackConfig.getAuthkey());
-        System.out.println("User: " + browserstackConfig.getUrl());
-        System.out.println("User: " + browserstackConfig.getApp());
-
-
+        caps.setCapability("bstack:options", bstackOptions);
         try {
-            return new RemoteWebDriver(
-                    new URL(browserstackConfig.getUrl()), caps);
+            return new RemoteWebDriver(new URL(browserstackConfig.getUrl()), caps);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

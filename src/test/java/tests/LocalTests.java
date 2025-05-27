@@ -72,7 +72,6 @@ public class LocalTests extends TestBase {
         searchScreen.searchLineSendKeys("Riesling");
         resultScreen.checkResult("Riesling");
 
-
     }
 }
 
