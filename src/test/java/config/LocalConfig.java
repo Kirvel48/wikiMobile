@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${envMobile}.properties"
+        "classpath:emulation.properties"
 })
 public interface LocalConfig extends Config {
     @Config.Key("deviceName")
