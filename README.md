@@ -41,7 +41,6 @@ ____
 <a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/Allure.svg" width="50" height="50"  alt="Allure"/></a> 
 <a href="https://qameta.io/"><img src="images/Allure2.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
 <a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
-<a href="https://www.atlassian.com/ru/software/jira/"><img src="images/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </p>
 
 Тесты написаны на языке <code>Java</code> с использованием фреймворка для автоматизации тестирования <code>Selenide</code>, сборщик - <code>Gradle</code>.
@@ -88,7 +87,7 @@ gradle clean test -DdeviceHost=browserstack
 
 ___
 <a id="allure"></a>
-## <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud)</a>
+## <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/wikiTests/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
@@ -107,6 +106,7 @@ ___
 
   <p align="center">  
 <img title="Allure Graphics" src="images/AllureGraphs.jpg" width="850">
+    
 ___
 <a id="allure-testops"></a>
 ## Интеграция с <a target="_blank" href="https://allure.autotests.cloud/launch/46583">Allure TestOps</a>
