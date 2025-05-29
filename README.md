@@ -19,7 +19,12 @@ ____
 
 * <a href="#allure">Allure отчет</a>
 
+* <a href="#allure-testops">Интеграция с Allure TestOps</a>
+
 * <a href="#telegram">Уведомление в Telegram при помощи бота</a>
+
+* <a href="#video">Примеры видео выполнения тестов на BrowserStack</a>
+
 
 ____
 
